@@ -25,9 +25,10 @@
     let My_blog = document.querySelector('#My_Blog')
     window.onload = function () {
         My_blog.contentWindow.postMessage("后浪Blog", "https://www.mdzz.wiki/")
+        setInterval(function () {
+            My_blog.contentWindow.postMessage("后浪Blog", "https://www.mdzz.wiki/")
+        },50)
     }
-    setInterval(function () {
-        My_blog.contentWindow.postMessage("后浪Blog", "https://www.mdzz.wiki/")
-    },50)
+
 </script>
 </html>
