@@ -23,18 +23,10 @@
 </body>
 
 <script>
-    //iframe加载完成后，对其子元素进行操作
-    var iframe = document.querySelector("#My_Blog");
-    if (iframe.attachEvent) {
-        iframe.attachEvent("onload", function() {
-            //iframe加载完成后你需要进行的操作
-            document.querySelector("#content > main > div > div > header > h1").innerText = '后浪blog'
-        });
-    } else {
-        iframe.onload = function() {
-            //iframe加载完成后你需要进行的操作
-            document.querySelector("#content > main > div > div > header > h1").innerText = '后浪blog'
-        };
+    window.onload = function(){
+        document.querySelector('#My_Blog')
+            .contentWindow.postMessage("后浪Blog",
+            "https://www.mdzz.wiki/")
     }
 </script>
 </html>
