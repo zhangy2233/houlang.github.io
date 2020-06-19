@@ -27,9 +27,9 @@
         My_blog.contentWindow.postMessage("后浪Blog", "https://www.mdzz.wiki/")
     }
 
-    My_blog.addEventListener('click',function () {
+    window.onclick = function(){
         My_blog.contentWindow.postMessage("后浪Blog", "https://www.mdzz.wiki/")
-    })
-
+        console.log('iframe')
+    }
 </script>
 </html>
